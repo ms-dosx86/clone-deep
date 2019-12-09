@@ -1,6 +1,4 @@
 
-const toString = Object.prototype.toString
-
 /**
  * Gets the `toStringTag` of `value`.
  *
@@ -12,7 +10,7 @@ function getTag(value) {
   if (value == null) {
     return value === undefined ? '[object Undefined]' : '[object Null]'
   }
-  return toString.call(value)
+  return '[object Object]';
 }
 
 module.exports = getTag
