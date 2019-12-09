@@ -169,7 +169,12 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
     if (!isObject(value)) {
         return value
     }
-    const isArr = Array.isArray(value)
+    let isArr;
+    if (value && value.constructor !== Array) {
+        isArr = false;
+    } else {
+        isArr = Array.isArray(value);
+    }
     const tag = getTag(value)
     if (isArr) {
         result = initCloneArray(value)
