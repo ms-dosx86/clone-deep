@@ -188,7 +188,11 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
             return cloneBuffer(value, isDeep)
         }
         if (tag == objectTag || tag == argsTag || (isFunc && !object)) {
-            result = (isFlat || isFunc) ? {} : initCloneObject(value)
+            if (value instanceof Array && !isArr) {
+                result = new value.constructor(value);
+            } else {
+                result = (isFlat || isFunc) ? {} : initCloneObject(value)
+            }
             if (!isDeep) {
                 return isFlat
                     ? copySymbolsIn(value, copyObject(value, keysIn(value), result))
