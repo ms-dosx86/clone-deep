@@ -1,6 +1,6 @@
 {
   "name": "@saritasa/clone-deep",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A patched version of lodash.clonedeep",
   "main": "index.js",
   "scripts": {
