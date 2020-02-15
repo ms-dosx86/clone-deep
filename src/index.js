@@ -1,4 +1,4 @@
-const baseClone = require('./src/baseClone.js');
+const baseClone = require('./baseClone.js');
 
 /** Used to compose bitmasks for cloning. */
 const CLONE_DEEP_FLAG = 1

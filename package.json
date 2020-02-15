@@ -1,11 +1,19 @@
 {
   "name": "@saritasa/clone-deep",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A patched version of lodash.clonedeep",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "babel src --out-dir lib"
+  },
+  "babel": {
+    "presets": ["es2015"]
   },
   "author": "ms-dosx86",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
